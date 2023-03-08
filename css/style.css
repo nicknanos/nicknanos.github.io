@@ -1,3 +1,43 @@
+@font-face {
+    font-family: Roboto;
+    src: url('/fonts/Roboto-Regular.ttf');
+  }
+   
+  @font-face {
+    font-family: Ubuntu Mono;
+    src: url('/fonts/UbuntuMono-Regular.ttf');
+  } 
+  @font-face {
+    font-family: Advent Pro;
+    src: url('/fonts/AdventPro-Regular.ttf');
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #D5C5C8;
+}
+
+nav {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+    margin: 10px 5px;
+}
+
+nav ul {
+    padding-left: 0px;
+    background-color: #ACBDBA;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;   
+    justify-content: center;  
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    font-family: 'Ubuntu Mono', monospace;
 }
