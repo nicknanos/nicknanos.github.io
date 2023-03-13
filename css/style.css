@@ -1,43 +1,142 @@
-@font-face {
-    font-family: Roboto;
-    src: url('/fonts/Roboto-Regular.ttf');
-  }
-   
-  @font-face {
-    font-family: Ubuntu Mono;
-    src: url('/fonts/UbuntuMono-Regular.ttf');
-  } 
-  @font-face {
-    font-family: Advent Pro;
-    src: url('/fonts/AdventPro-Regular.ttf');
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap');
 
-html {
-    scroll-behavior: smooth;
+  /*Media querie to make menu display in a column instead of a row*/
+@media screen and (max-width: 600px) {
+  header nav ul{
+    flex-flow: column nowrap;
+  }
 }
 
-body {
+html, body {
+    scroll-behavior: smooth;
     background-color: #D5C5C8;
+    overflow: visible;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Advent Pro', Arial, Helvetica, sans-serif ;
+  font-size: 50px;
+  color: white;
+}
+
+h2 {
+  font-family: 'Advent Pro', Arial, Helvetica, sans-serif ;
+  font-size: 45px;
+  color: white;
+}
+
+#name {
+  font-size: 50px;
+  color: #584287;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.welcome {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+
+  position:relative;
+  height:100vh;
+  width:100%;
+  z-index:999
+}
+
+#button {
+  margin-top: 70px;
+}
+
+#button a {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 3px outset #392B58;
+  border-width:3px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Ubuntu Mono', sans-serif;
+}
+
+#button a:hover {
+  background-color: #392B58;
+  color: #5E7CE2;
 }
 
 nav {
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px 10px;
-    margin: 10px 5px;
+    margin: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    grid-area: 2 / 1 / 3 / 2; 
+    background-color: #5E7CE2;
 }
 
 nav ul {
-    padding-left: 0px;
-    background-color: #ACBDBA;
+    margin: 0px;
     text-align: center;
     display: flex;
     flex-flow: row nowrap;   
-    justify-content: center;  
+    justify-content:flex-end;  
     list-style: none;
 }
 
 nav ul li {
-    padding: 10px 20px;
-    font-family: 'Ubuntu Mono', monospace;
+  padding: 30px 20px;
+  font-family: 'Ubuntu Mono', monospace;
+  flex-basis: 150px;
+}
+
+nav li:hover {  
+  background-color: #392B58;
+  border-radius: 10px;
+}
+
+nav  li a {    
+  color: #17301C;
+  text-decoration: none;
+  font-size:x-large;
+  padding: 30px 20px;
+}
+
+nav  li:hover a {    
+  color: #5E7CE2;
+}
+
+
+
+
+footer {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+
+#homeCanvas{
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+  background-color: #1a1a1a;
 }
