@@ -2,30 +2,30 @@ let canvas;
 let ctx;
 let flowField;
 let flowFieldAnimation;
+let welcomBox;
 
 window.onload = ()=>{
     canvas = document.getElementById("homeCanvas");
     ctx = canvas.getContext("2d");
+    initializeAnimation();
+}
 
-    let welcomBox = document.querySelector('.welcome')
+window.addEventListener('resize', ()=>{
+    cancelAnimationFrame(flowFieldAnimation);
+    initializeAnimation();
+});
+
+function initializeAnimation() {
+    welcomBox = document.querySelector('.welcome');
     canvas.width = welcomBox.offsetWidth;
     canvas.height = welcomBox.offsetHeight;
     flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
     flowField.animate(0);
 }
 
-window.addEventListener('resize', ()=>{
-    cancelAnimationFrame(flowFieldAnimation);
-    canvas.width = welcomBox.offsetWidth;
-    canvas.height = welcomBox.offsetHeight;
-    flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
-    flowField.animate(0);
-});
-
 const mouse = {
     x:0,
     y:0,
-
 }
 
 window.addEventListener('mousemove', (e)=>{
@@ -88,7 +88,6 @@ class FlowFieldEffect {
             this.timer += deltaTime;
         }
         
-        console.log("animating");
         flowFieldAnimation = requestAnimationFrame(this.animate.bind(this));
     }
 }
