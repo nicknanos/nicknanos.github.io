@@ -107,7 +107,6 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    grid-area: 2 / 1 / 3 / 2;        /*!!!*/
     background-color: #392B58;
     
 }
@@ -144,14 +143,12 @@ nav  li:hover a {
 }
 
 #about {
-  grid-area: 3 / 1 / 4 / 2;
   display: flex;
   flex-flow: column nowrap;
   background-color: #1a1a1a;
   text-align: center;
   justify-content: center;
 
-  position:relative;
   height:100vh;
   width:100%;
   z-index:999;
@@ -195,6 +192,7 @@ nav  li:hover a {
 }
 
 #skills-title h3 {
+  margin-top: 90px;
   font-size: 80px;
 }
 
@@ -242,16 +240,91 @@ nav  li:hover a {
   margin: 10px 0px;
 }
 
+#projects {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  
+  height:100vh;
+  width:100%;
+  z-index:999;
+}
 
+#projects .title {
+  margin-top: 90px;
+}
+
+.projects-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+}
+
+.projects-container .project {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-container .project h4 {
+  color: white;
+}
+
+.projects-container .project img {
+  width: 30%;
+}
+
+.projects-container .project a {
+  text-decoration: none;
+  color: white;
+  border-bottom: #392B58;
+
+}
+
+.projects-container .project a:hover{
+  color: rgb(202, 195, 195);
+}
 
 footer {
-  grid-area: 6 / 1 / 7 / 2;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   background-color: #392B58;
   text-align: center;
   width: 100%;
-  height: 10vh;
+  height: 100%;
 }
 
+footer .socials ul {
+  display: flex;
+  list-style: none;
+  flex-flow: row nowrap;
+  justify-content:space-between;
+}
+
+footer .socials ul li {
+  margin: 10px;
+}
+
+footer .socials ul li a {
+  font-size: 45px;
+  color: white;
+}
+
+footer .socials ul li a:hover {
+  color: #17301C;
+}
+
+footer .copyright {
+  margin-bottom: 20px;
+  color: white;
+  font-size: medium;
+}
 
 #homeCanvas{
   position:absolute;
