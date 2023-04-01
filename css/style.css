@@ -240,6 +240,25 @@ nav  li:hover a {
   margin: 10px 0px;
 }
 
+#about .cv {
+  margin-top: 30px;
+}
+
+
+#about .cv a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  border: 5px solid #8164be;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+#about .cv a:hover {
+  background-color: #392B58;
+  text-decoration: underline;
+}
+
 #projects {
   display: flex;
   flex-flow: column nowrap;
