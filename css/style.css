@@ -356,3 +356,12 @@ footer .copyright {
   overflow:hidden;
   background-color: #1a1a1a;
 }
+
+.under-construction {
+  background-color: #f9d6d5;
+  color: #c72f26;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
