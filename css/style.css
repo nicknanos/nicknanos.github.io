@@ -320,14 +320,12 @@ footer {
 }
 
 footer .socials ul {
+  margin: 10px 0px;
   display: flex;
   list-style: none;
   flex-flow: row nowrap;
   justify-content:space-between;
-}
-
-footer .socials ul li {
-  margin: 10px;
+  gap: 20px;
 }
 
 footer .socials ul li a {
