@@ -167,7 +167,9 @@ nav  li:hover a {
 #about .infoCard img{
   width: 15%;
   object-fit: contain;
+  margin-top: 8px;
   margin-left: 30px;
+  border-radius: 50%;
 }
 
 #about .infoCard p{
